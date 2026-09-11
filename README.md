@@ -25,7 +25,7 @@ Add `yousefelshaer.com` under the Pages project's **Custom domains**. Cloudflare
 
 ## Content
 
-The portfolio includes education, skills, experience, and the Sentinel, Security Monitoring System, and Healthify projects from the current résumé. The visual design is inspired by marwanghazal.com, with original content and styling.
+The portfolio includes education, skills, experience, and the Sentinel, Security Monitoring System, and Personal Portfolio projects from the current résumé. The visual design is inspired by marwanghazal.com, with original content and styling.
 
 ## Update the résumé
 
