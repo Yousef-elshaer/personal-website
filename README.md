@@ -25,4 +25,10 @@ Add `yousefelshaer.com` under the Pages project's **Custom domains**. Cloudflare
 
 ## Content
 
-The initial page includes only a brief student introduction and this website as its first project. Add real projects, contact links, and a résumé as they become available. No analytics, forms, or tracking are included.
+The portfolio includes education, skills, experience, and the Sentinel, Security Monitoring System, and Healthify projects from the current résumé. The visual design is inspired by marwanghazal.com, with original content and styling.
+
+## Update the résumé
+
+Replace `dist/resume.pdf` with the new PDF, keeping that filename. Commit and push the change; both résumé buttons will keep working. If education, skills, projects, or experience change, also update the corresponding text in `dist/index.html`.
+
+Fonts are loaded from Google Fonts (Syne and DM Sans), with local fallbacks. No analytics or forms are included.
