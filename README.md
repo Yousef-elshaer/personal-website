@@ -1,8 +1,21 @@
 # Yousef Elshaer — Personal Website
 
-Source for **https://yousefelshaer.com**. A responsive portfolio built with HTML, CSS, and JavaScript. No framework, dependencies, or build step.
+Source for **[yousefelshaer.com](https://yousefelshaer.com)**. A responsive portfolio built with HTML, CSS, and JavaScript and deployed through Cloudflare Workers.
 
-## Edit
+## Highlights
+
+- Responsive, accessible design with keyboard focus states and reduced-motion support
+- Animated introduction with a persistent user-controlled motion preference
+- Project, skills, experience, contact, and downloadable résumé sections
+- Open Graph, Twitter Card, canonical, manifest, and print metadata
+- Framework-free implementation with no runtime dependencies or build step
+- Automatic production deployment from the `main` branch
+
+## Stack
+
+HTML · CSS · JavaScript · Cloudflare Workers · GitHub
+
+## Run locally
 
 - `dist/index.html` — page content, navigation, and projects.
 - `dist/styles.css` — colors, typography, and responsive layouts.
@@ -11,6 +24,16 @@ Source for **https://yousefelshaer.com**. A responsive portfolio built with HTML
 - `dist/site.webmanifest` — install metadata and theme colours.
 
 Open `dist/index.html` in a browser, or run `python3 -m http.server 8000 --directory dist` and visit http://localhost:8000.
+
+## Project structure
+
+| Path | Purpose |
+| --- | --- |
+| `dist/index.html` | Semantic page content, metadata, navigation, and project presentation |
+| `dist/styles.css` | Design system, responsive layouts, animation, focus, and print styles |
+| `dist/script.js` | Typing effects, motion preferences, and active-section navigation |
+| `dist/resume.pdf` | Current downloadable résumé |
+| `wrangler.jsonc` | Cloudflare Workers static asset configuration |
 
 ## Cloudflare Workers deployment
 
