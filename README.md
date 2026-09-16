@@ -8,6 +8,7 @@ Source for **https://yousefelshaer.com**. A responsive portfolio built with HTML
 - `dist/styles.css` — colors, typography, and responsive layouts.
 - `dist/script.js` — small enhancements.
 - `dist/favicon.svg` — browser icon.
+- `dist/site.webmanifest` — install metadata and theme colours.
 
 Open `dist/index.html` in a browser, or run `python3 -m http.server 8000 --directory dist` and visit http://localhost:8000.
 
@@ -32,3 +33,5 @@ The portfolio includes education, skills, experience, and the Sentinel, Security
 Replace `dist/resume.pdf` with the new PDF, keeping that filename. Commit and push the change; both résumé buttons will keep working. If education, skills, projects, or experience change, also update the corresponding text in `dist/index.html`.
 
 Fonts are loaded from Google Fonts (Syne and DM Sans), with local fallbacks. No analytics or forms are included.
+
+The page includes keyboard focus styles, reduced-motion support, active-section navigation, social sharing metadata, and a print-friendly layout.

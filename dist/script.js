@@ -4,7 +4,9 @@ const motionButton = document.querySelector('.motion-toggle');
 const names = [...document.querySelectorAll('[data-name]')];
 const role = document.getElementById('typed-role');
 const roles = ['Computer Science Student', 'Cybersecurity Focused', 'Building Security Tools'];
+const navLinks = [...document.querySelectorAll('nav a[href^="#"]')];
 let userPaused = false;
+try { userPaused = localStorage.getItem('portfolio-motion-paused') === 'true'; } catch {}
 const timers = new Set();
 let observer;
 function later(callback, delay) {
@@ -66,10 +68,28 @@ function updateMotion() {
     });
   }
 }
-motionButton.addEventListener('click', () => { userPaused = !userPaused; updateMotion(); });
-reducedMotion.addEventListener('change', updateMotion);
+motionButton.addEventListener('click', () => {
+  userPaused = !userPaused;
+  try { localStorage.setItem('portfolio-motion-paused', String(userPaused)); } catch {}
+  updateMotion();
+});
+reducedMotion.addEventListener?.('change', updateMotion);
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) { timers.forEach(clearTimeout); timers.clear(); }
   else updateMotion();
 });
+
+if ('IntersectionObserver' in window) {
+  const sections = navLinks
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
+  const navObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      navLinks.forEach(link => link.removeAttribute('aria-current'));
+      document.querySelector(`nav a[href="#${entry.target.id}"]`)?.setAttribute('aria-current', 'page');
+    });
+  }, { rootMargin: '-35% 0px -55%', threshold: 0 });
+  sections.forEach(section => navObserver.observe(section));
+}
 updateMotion();
