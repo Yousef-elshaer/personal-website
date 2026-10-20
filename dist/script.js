@@ -60,7 +60,7 @@ function updateMotion() {
         }
       });
     }, { threshold: 0.08 });
-    document.querySelectorAll('.section-heading, .about-intro, .facts, .project-card, .skill-group, .experience-row, .contact-actions').forEach(el => {
+    document.querySelectorAll('.section-heading, .about-intro, .facts, .project-card, .skill-group, .involvement-card, .experience-row, .contact-actions').forEach(el => {
       if (el.getBoundingClientRect().top > window.innerHeight) {
         el.classList.add('will-reveal');
         observer.observe(el);
